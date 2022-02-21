@@ -32,6 +32,16 @@
                         </div>
                     @endif
                     
+                    @if(count($post->tags) > 0)
+                        <div class="mb-3">
+                            <strong>Tags:</strong>
+                            @foreach ($post->tags as $tag)
+                            <span class="badge badge-primary">{{$tag->name}}</span>
+                            @endforeach
+                        </div>
+                    @endif
+
+
                     <strong>Descrizione:</strong>
                      {{ $post->content }}
                 </div>
