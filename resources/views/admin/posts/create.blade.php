@@ -21,7 +21,7 @@
                         </div>
                         <div class="form-group">
                             <label for="content">Contenuto</label>
-                            <textarea class="form-control @error('content') is-invalid @enderror" id="content" name="content" placeholder="Inserisci il contenuto del post" rows="6" value="{{old("content")}}"></textarea>
+                            <textarea class="form-control @error('content') is-invalid @enderror" id="content" name="content" placeholder="Inserisci il contenuto del post" rows="6">{{old('content')}}</textarea>
                             @error('content')
                                 <div class="alert alert-danger">{{$message}}</div>
                              @enderror
